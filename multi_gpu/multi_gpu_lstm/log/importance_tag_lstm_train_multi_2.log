@@ -1,0 +1,174 @@
+
+loading word table...
+loading word table finished!!! 0.45 seconds escaped...
+2018-10-30 18:57:20.566559: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-10-30 18:57:21.032910: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla P40 major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:19:00.0
+totalMemory: 22.38GiB freeMemory: 22.21GiB
+2018-10-30 18:57:21.366723: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla P40 major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:1c:00.0
+totalMemory: 22.38GiB freeMemory: 22.21GiB
+2018-10-30 18:57:21.368233: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1
+2018-10-30 18:57:22.060386: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-10-30 18:57:22.060496: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 
+2018-10-30 18:57:22.060509: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N Y 
+2018-10-30 18:57:22.060515: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   Y N 
+2018-10-30 18:57:22.062347: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 21551 MB memory) -> physical GPU (device: 0, name: Tesla P40, pci bus id: 0000:19:00.0, compute capability: 6.1)
+2018-10-30 18:57:22.065374: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 21551 MB memory) -> physical GPU (device: 1, name: Tesla P40, pci bus id: 0000:1c:00.0, compute capability: 6.1)
+train file list:
+
+../data/shuffle-part-0
+../data/shuffle-part-1
+../data/shuffle-part-10
+../data/shuffle-part-11
+../data/shuffle-part-12
+../data/shuffle-part-13
+../data/shuffle-part-14
+../data/shuffle-part-15
+../data/shuffle-part-16
+../data/shuffle-part-17
+../data/shuffle-part-18
+../data/shuffle-part-19
+../data/shuffle-part-2
+../data/shuffle-part-20
+../data/shuffle-part-21
+../data/shuffle-part-22
+../data/shuffle-part-23
+../data/shuffle-part-24
+../data/shuffle-part-25
+../data/shuffle-part-26
+../data/shuffle-part-27
+../data/shuffle-part-28
+../data/shuffle-part-29
+../data/shuffle-part-3
+../data/shuffle-part-30
+../data/shuffle-part-31
+../data/shuffle-part-32
+../data/shuffle-part-33
+../data/shuffle-part-34
+../data/shuffle-part-35
+../data/shuffle-part-36
+../data/shuffle-part-37
+../data/shuffle-part-38
+../data/shuffle-part-39
+../data/shuffle-part-4
+../data/shuffle-part-40
+../data/shuffle-part-41
+../data/shuffle-part-42
+../data/shuffle-part-43
+../data/shuffle-part-44
+../data/shuffle-part-45
+../data/shuffle-part-46
+../data/shuffle-part-47
+../data/shuffle-part-48
+../data/shuffle-part-49
+../data/shuffle-part-5
+../data/shuffle-part-50
+../data/shuffle-part-51
+../data/shuffle-part-52
+../data/shuffle-part-53
+../data/shuffle-part-54
+../data/shuffle-part-55
+../data/shuffle-part-56
+../data/shuffle-part-57
+../data/shuffle-part-58
+../data/shuffle-part-59
+../data/shuffle-part-6
+../data/shuffle-part-60
+../data/shuffle-part-61
+../data/shuffle-part-62
+../data/shuffle-part-63
+../data/shuffle-part-64
+../data/shuffle-part-65
+../data/shuffle-part-66
+../data/shuffle-part-67
+../data/shuffle-part-68
+../data/shuffle-part-69
+../data/shuffle-part-7
+../data/shuffle-part-70
+../data/shuffle-part-71
+../data/shuffle-part-72
+../data/shuffle-part-73
+../data/shuffle-part-74
+../data/shuffle-part-75
+../data/shuffle-part-76
+../data/shuffle-part-77
+../data/shuffle-part-78
+../data/shuffle-part-79
+../data/shuffle-part-8
+../data/shuffle-part-80
+../data/shuffle-part-81
+../data/shuffle-part-82
+../data/shuffle-part-83
+../data/shuffle-part-84
+../data/shuffle-part-85
+../data/shuffle-part-86
+../data/shuffle-part-87
+../data/shuffle-part-88
+../data/shuffle-part-89
+../data/shuffle-part-9
+../data/shuffle-part-90
+../data/shuffle-part-91
+../data/shuffle-part-92
+../data/shuffle-part-93
+../data/shuffle-part-94
+../data/shuffle-part-95
+../data/shuffle-part-96
+../data/shuffle-part-97
+../data/shuffle-part-98
+../data/shuffle-part-99
+build model...
+build model on gpu tower...
+tower:5...
+Traceback (most recent call last):
+  File "importance_tag_lstm_train_multi_2.py", line 290, in <module>
+    tf.app.run()
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/platform/app.py", line 126, in run
+    _sys.exit(main(argv))
+  File "importance_tag_lstm_train_multi_2.py", line 268, in main
+    lstm_models = createLstmModel(myconfig,w2v)
+  File "importance_tag_lstm_train_multi_2.py", line 98, in __init__
+    pred,loss,true_loss= self.build_model(_input_data,_targets,_lengths,_frame_weight )
+  File "importance_tag_lstm_train_multi_2.py", line 126, in build_model
+    output, _ = tf.nn.dynamic_rnn(lstm_cell, word_embedding, sequence_length=lengths, dtype=tf.float32)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/ops/rnn.py", line 627, in dynamic_rnn
+    dtype=dtype)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/ops/rnn.py", line 824, in _dynamic_rnn_loop
+    swap_memory=swap_memory)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/ops/control_flow_ops.py", line 3224, in while_loop
+    result = loop_context.BuildLoop(cond, body, loop_vars, shape_invariants)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/ops/control_flow_ops.py", line 2956, in BuildLoop
+    pred, body, original_loop_vars, loop_vars, shape_invariants)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/ops/control_flow_ops.py", line 2893, in _BuildLoop
+    body_result = body(*packed_vars_for_body)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/ops/control_flow_ops.py", line 3194, in <lambda>
+    body = lambda i, lv: (i + 1, orig_body(*lv))
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/ops/rnn.py", line 793, in _time_step
+    skip_conditionals=True)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/ops/rnn.py", line 248, in _rnn_step
+    new_output, new_state = call_cell()
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/ops/rnn.py", line 781, in <lambda>
+    call_cell = lambda: cell(input_t, state)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/ops/rnn_cell_impl.py", line 339, in __call__
+    *args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/layers/base.py", line 699, in __call__
+    self.build(input_shapes)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/ops/rnn_cell_impl.py", line 767, in build
+    partitioner=maybe_partitioner)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/layers/base.py", line 546, in add_variable
+    partitioner=partitioner)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/training/checkpointable.py", line 436, in _add_variable_with_custom_getter
+    **kwargs_for_getter)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/ops/variable_scope.py", line 1317, in get_variable
+    constraint=constraint)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/ops/variable_scope.py", line 1079, in get_variable
+    constraint=constraint)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/ops/variable_scope.py", line 425, in get_variable
+    constraint=constraint)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/ops/variable_scope.py", line 394, in _true_getter
+    use_resource=use_resource, constraint=constraint)
+  File "/usr/lib/python2.7/site-packages/tensorflow/python/ops/variable_scope.py", line 751, in _get_single_variable
+    "reuse=tf.AUTO_REUSE in VarScope?" % name)
+ValueError: Variable cpu_variables/rnn/lstm_cell/kernel does not exist, or was not created with tf.get_variable(). Did you mean to set reuse=tf.AUTO_REUSE in VarScope?

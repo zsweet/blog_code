@@ -1,0 +1,223 @@
+
+loading word table...
+loading word table finished!!! 0.42 seconds escaped...
+2018-10-31 00:08:55.578271: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-10-31 00:08:56.188155: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+name: Tesla P40 major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:08:00.0
+totalMemory: 22.38GiB freeMemory: 22.21GiB
+2018-10-31 00:08:56.548025: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 1 with properties: 
+name: Tesla P40 major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:0b:00.0
+totalMemory: 22.38GiB freeMemory: 22.21GiB
+2018-10-31 00:08:56.898271: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 2 with properties: 
+name: Tesla P40 major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:0e:00.0
+totalMemory: 22.38GiB freeMemory: 22.21GiB
+2018-10-31 00:08:57.268663: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 3 with properties: 
+name: Tesla P40 major: 6 minor: 1 memoryClockRate(GHz): 1.531
+pciBusID: 0000:11:00.0
+totalMemory: 22.38GiB freeMemory: 22.21GiB
+2018-10-31 00:08:57.277381: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0, 1, 2, 3
+2018-10-31 00:08:58.518702: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-10-31 00:08:58.518771: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 1 2 3 
+2018-10-31 00:08:58.518783: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N Y Y Y 
+2018-10-31 00:08:58.518790: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 1:   Y N Y Y 
+2018-10-31 00:08:58.518795: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 2:   Y Y N Y 
+2018-10-31 00:08:58.518801: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 3:   Y Y Y N 
+2018-10-31 00:08:58.520694: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 21551 MB memory) -> physical GPU (device: 0, name: Tesla P40, pci bus id: 0000:08:00.0, compute capability: 6.1)
+2018-10-31 00:08:58.522788: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 21551 MB memory) -> physical GPU (device: 1, name: Tesla P40, pci bus id: 0000:0b:00.0, compute capability: 6.1)
+2018-10-31 00:08:58.524571: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 21551 MB memory) -> physical GPU (device: 2, name: Tesla P40, pci bus id: 0000:0e:00.0, compute capability: 6.1)
+2018-10-31 00:08:58.526266: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 21551 MB memory) -> physical GPU (device: 3, name: Tesla P40, pci bus id: 0000:11:00.0, compute capability: 6.1)
+train file list:
+
+../data/shuffle-part-0
+../data/shuffle-part-1
+../data/shuffle-part-10
+../data/shuffle-part-11
+../data/shuffle-part-12
+../data/shuffle-part-13
+../data/shuffle-part-14
+../data/shuffle-part-15
+../data/shuffle-part-16
+../data/shuffle-part-17
+../data/shuffle-part-18
+../data/shuffle-part-19
+../data/shuffle-part-2
+../data/shuffle-part-20
+../data/shuffle-part-21
+../data/shuffle-part-22
+../data/shuffle-part-23
+../data/shuffle-part-24
+../data/shuffle-part-25
+../data/shuffle-part-26
+../data/shuffle-part-27
+../data/shuffle-part-28
+../data/shuffle-part-29
+../data/shuffle-part-3
+../data/shuffle-part-30
+../data/shuffle-part-31
+../data/shuffle-part-32
+../data/shuffle-part-33
+../data/shuffle-part-34
+../data/shuffle-part-35
+../data/shuffle-part-36
+../data/shuffle-part-37
+../data/shuffle-part-38
+../data/shuffle-part-39
+../data/shuffle-part-4
+../data/shuffle-part-40
+../data/shuffle-part-41
+../data/shuffle-part-42
+../data/shuffle-part-43
+../data/shuffle-part-44
+../data/shuffle-part-45
+../data/shuffle-part-46
+../data/shuffle-part-47
+../data/shuffle-part-48
+../data/shuffle-part-49
+../data/shuffle-part-5
+../data/shuffle-part-50
+../data/shuffle-part-51
+../data/shuffle-part-52
+../data/shuffle-part-53
+../data/shuffle-part-54
+../data/shuffle-part-55
+../data/shuffle-part-56
+../data/shuffle-part-57
+../data/shuffle-part-58
+../data/shuffle-part-59
+../data/shuffle-part-6
+../data/shuffle-part-60
+../data/shuffle-part-61
+../data/shuffle-part-62
+../data/shuffle-part-63
+../data/shuffle-part-64
+../data/shuffle-part-65
+../data/shuffle-part-66
+../data/shuffle-part-67
+../data/shuffle-part-68
+../data/shuffle-part-69
+../data/shuffle-part-7
+../data/shuffle-part-70
+../data/shuffle-part-71
+../data/shuffle-part-72
+../data/shuffle-part-73
+../data/shuffle-part-74
+../data/shuffle-part-75
+../data/shuffle-part-76
+../data/shuffle-part-77
+../data/shuffle-part-78
+../data/shuffle-part-79
+../data/shuffle-part-8
+../data/shuffle-part-80
+../data/shuffle-part-81
+../data/shuffle-part-82
+../data/shuffle-part-83
+../data/shuffle-part-84
+../data/shuffle-part-85
+../data/shuffle-part-86
+../data/shuffle-part-87
+../data/shuffle-part-88
+../data/shuffle-part-89
+../data/shuffle-part-9
+../data/shuffle-part-90
+../data/shuffle-part-91
+../data/shuffle-part-92
+../data/shuffle-part-93
+../data/shuffle-part-94
+../data/shuffle-part-95
+../data/shuffle-part-96
+../data/shuffle-part-97
+../data/shuffle-part-98
+../data/shuffle-part-99
+build model...
+build model on gpu tower...
+tower:0...
+tower:1...
+tower:2...
+tower:3...
+build model on gpu tower done.
+---------- Model Variabels -----------
+1. cpu_variables/embedding:0	/device:GPU:0	(450001, 100)	<dtype: 'float32'>
+2. cpu_variables/rnn/lstm_cell/kernel:0	/device:GPU:0	(228, 1024)	<dtype: 'float32'>
+3. cpu_variables/rnn/lstm_cell/bias:0	/device:GPU:0	(1024,)	<dtype: 'float32'>
+4. cpu_variables/rnn/lstm_cell/w_f_diag:0	/device:GPU:0	(256,)	<dtype: 'float32'>
+5. cpu_variables/rnn/lstm_cell/w_i_diag:0	/device:GPU:0	(256,)	<dtype: 'float32'>
+6. cpu_variables/rnn/lstm_cell/w_o_diag:0	/device:GPU:0	(256,)	<dtype: 'float32'>
+7. cpu_variables/rnn/lstm_cell/projection/kernel:0	/device:GPU:0	(256, 128)	<dtype: 'float32'>
+8. cpu_variables/softmax_fw_w:0	/device:GPU:0	(128, 1)	<dtype: 'float32'>
+9. cpu_variables/softmax_fw_b:0	/device:GPU:0	(1,)	<dtype: 'float32'>
+------------------------
+reduce model on cpu...
+file=../data/shuffle-part-0, epoch=1 begins:
+2018-10-31 00:10:22 : avg cost after    10 batches: cur_loss=0.073947, avg_loss=0.073947, 80.73 seconds elapsed ...
+2018-10-31 00:11:37 : avg cost after    20 batches: cur_loss=0.073406, avg_loss=0.073676, 155.74 seconds elapsed ...
+2018-10-31 00:12:53 : avg cost after    30 batches: cur_loss=0.072423, avg_loss=0.073258, 231.62 seconds elapsed ...
+Cost time: 253.873696089 sec.
+discardLines counter : 135080
+file=../data/shuffle-part-1, epoch=2 begins:
+2018-10-31 00:14:31 : avg cost after    43 batches: cur_loss=0.068723, avg_loss=0.068723, 75.60 seconds elapsed ...
+2018-10-31 00:15:46 : avg cost after    53 batches: cur_loss=0.060332, avg_loss=0.064527, 150.72 seconds elapsed ...
+2018-10-31 00:17:02 : avg cost after    63 batches: cur_loss=0.056876, avg_loss=0.061977, 225.97 seconds elapsed ...
+Cost time: 248.433809996 sec.
+discardLines counter : 135875
+file=../data/shuffle-part-10, epoch=3 begins:
+2018-10-31 00:18:40 : avg cost after    76 batches: cur_loss=0.054763, avg_loss=0.054763, 75.91 seconds elapsed ...
+2018-10-31 00:19:55 : avg cost after    86 batches: cur_loss=0.054004, avg_loss=0.054383, 151.09 seconds elapsed ...
+2018-10-31 00:21:11 : avg cost after    96 batches: cur_loss=0.053329, avg_loss=0.054032, 226.88 seconds elapsed ...
+Cost time: 249.036334991 sec.
+discardLines counter : 136057
+file=../data/shuffle-part-11, epoch=4 begins:
+2018-10-31 00:22:48 : avg cost after   109 batches: cur_loss=0.052689, avg_loss=0.052689, 75.32 seconds elapsed ...
+2018-10-31 00:24:04 : avg cost after   119 batches: cur_loss=0.052326, avg_loss=0.052508, 150.74 seconds elapsed ...
+2018-10-31 00:25:20 : avg cost after   129 batches: cur_loss=0.051923, avg_loss=0.052313, 226.56 seconds elapsed ...
+Cost time: 248.604837894 sec.
+discardLines counter : 135813
+file=../data/shuffle-part-12, epoch=5 begins:
+2018-10-31 00:26:57 : avg cost after   142 batches: cur_loss=0.051349, avg_loss=0.051349, 75.13 seconds elapsed ...
+2018-10-31 00:28:13 : avg cost after   152 batches: cur_loss=0.050836, avg_loss=0.051092, 151.26 seconds elapsed ...
+2018-10-31 00:29:29 : avg cost after   162 batches: cur_loss=0.050124, avg_loss=0.050770, 227.24 seconds elapsed ...
+Cost time: 249.32131505 sec.
+discardLines counter : 135442
+file=../data/shuffle-part-13, epoch=6 begins:
+2018-10-31 00:31:07 : avg cost after   175 batches: cur_loss=0.048627, avg_loss=0.048627, 76.19 seconds elapsed ...
+2018-10-31 00:32:24 : avg cost after   185 batches: cur_loss=0.046896, avg_loss=0.047762, 152.35 seconds elapsed ...
+2018-10-31 00:33:39 : avg cost after   195 batches: cur_loss=0.045543, avg_loss=0.047022, 228.18 seconds elapsed ...
+Cost time: 250.720557928 sec.
+discardLines counter : 136345
+file=../data/shuffle-part-14, epoch=7 begins:
+2018-10-31 00:35:18 : avg cost after   208 batches: cur_loss=0.044351, avg_loss=0.044351, 76.58 seconds elapsed ...
+2018-10-31 00:36:35 : avg cost after   218 batches: cur_loss=0.043557, avg_loss=0.043954, 152.60 seconds elapsed ...
+2018-10-31 00:37:51 : avg cost after   228 batches: cur_loss=0.042851, avg_loss=0.043586, 228.93 seconds elapsed ...
+Cost time: 251.584218025 sec.
+discardLines counter : 136306
+file=../data/shuffle-part-15, epoch=8 begins:
+2018-10-31 00:39:30 : avg cost after   241 batches: cur_loss=0.042097, avg_loss=0.042097, 76.69 seconds elapsed ...
+2018-10-31 00:40:46 : avg cost after   251 batches: cur_loss=0.041536, avg_loss=0.041816, 152.81 seconds elapsed ...
+2018-10-31 00:42:02 : avg cost after   261 batches: cur_loss=0.041016, avg_loss=0.041550, 228.84 seconds elapsed ...
+Cost time: 251.844107866 sec.
+discardLines counter : 135920
+file=../data/shuffle-part-16, epoch=9 begins:
+2018-10-31 00:43:42 : avg cost after   274 batches: cur_loss=0.040342, avg_loss=0.040342, 76.56 seconds elapsed ...
+2018-10-31 00:44:58 : avg cost after   284 batches: cur_loss=0.039904, avg_loss=0.040123, 152.83 seconds elapsed ...
+2018-10-31 00:46:15 : avg cost after   294 batches: cur_loss=0.039510, avg_loss=0.039919, 229.45 seconds elapsed ...
+Cost time: 251.49942708 sec.
+discardLines counter : 135270
+file=../data/shuffle-part-17, epoch=10 begins:
+2018-10-31 00:47:53 : avg cost after   307 batches: cur_loss=0.039131, avg_loss=0.039131, 76.38 seconds elapsed ...
+2018-10-31 00:49:10 : avg cost after   317 batches: cur_loss=0.038818, avg_loss=0.038975, 152.98 seconds elapsed ...
+2018-10-31 00:50:26 : avg cost after   327 batches: cur_loss=0.038589, avg_loss=0.038846, 229.02 seconds elapsed ...
+Cost time: 251.429954052 sec.
+discardLines counter : 136505
+epoch:0   used time:253.873696089
+epoch:1   used time:248.433809996
+epoch:2   used time:249.036334991
+epoch:3   used time:248.604837894
+epoch:4   used time:249.32131505
+epoch:5   used time:250.720557928
+epoch:6   used time:251.584218025
+epoch:7   used time:251.844107866
+epoch:8   used time:251.49942708
+epoch:9   used time:251.429954052
+run 10 epoch use time:2506.34825897
