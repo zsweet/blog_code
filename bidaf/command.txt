@@ -1,0 +1,9 @@
+python run_preprocess_online.py  --valid_path '../ai_challenger_oqmrc_trainingset_20180816/ai_challenger_oqmrc_trainingset.json' --testa_path 'ai_challenger_oqmrc_testa_20180816/ai_challenger_oqmrc_testa.json'
+python softmax_output_run_shuffle_everyepoch_rand_initial_embedding.py --softmax_mode 'test' --getSoftmax --gpu '1' --dev_data_path '../dev_randomInitialEmbedding.pickle' --testa_data_path 'testa_randomInitialEmbedding.pickle' --model_prefix '_shuffle_everyepoch_rand_initial_embedding'  --softmax_log_output_path './data/rand_initial_test.softmax.output' --softmax_mode 'test' --model_dir  './data'
+
+
+第一个脚本修改参数
+--valid_path '../ai_challenger_oqmrc_trainingset_20180816/ai_challenger_oqmrc_trainingset.json' --testa_path 'ai_challenger_oqmrc_testa_20180816/ai_challenger_oqmrc_testa.json'
+
+第二个脚本修改参数
+--softmax_log_output_path './data/rand_initial_test.softmax.output' --softmax_mode 'test'
