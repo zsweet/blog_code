@@ -12,4 +12,5 @@ blog address log:
 - Attention-Based Capsule Networks with Dynamic Routing
 - [Dynamic Routing Between Capsules](https://zsweety.blog.csdn.net/article/details/87951016)
 - [Investigating Capsule Networks with Dynamic Routing for Text Classification](https://zsweety.blog.csdn.net/article/details/89109351)
+- Multiway Attention Networks for Modeling Sentence Pairs (2019.4.8)
 
